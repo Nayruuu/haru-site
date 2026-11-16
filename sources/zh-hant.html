@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>原始碼 · HARU</title>
+<meta name="description" content="HARU 하루 — 小小瞬間，你的故事。">
+<style>
+@font-face { font-family: Haru; src: url("../assets/HaruPrototype-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: Haru; src: url("../assets/HaruPrototype-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+/* Layout: one cream sheet under a sky band, like the app's screens. */
+:root {
+  --sky: #e8f3ff; --sheet: #fffdf6; --ink: #243a6b; --soft: #5f6f8f;
+  --chip: rgba(36,58,107,.08); --line: rgba(36,58,107,.14); --button: #9cc9ff; --button-ink: #1b2a41;
+  --display: Haru, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --text: system-ui, -apple-system, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --sky: #16213f; --sheet: #1d2c52; --ink: #f4f1e6; --soft: #b7c2dc;
+  --chip: rgba(255,253,246,.08); --line: rgba(255,253,246,.16); --button: #9cc9ff; --button-ink: #1b2a41;
+  color-scheme: dark;
+} }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sky); color: var(--ink); font: 400 17px/1.55 var(--text); }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--button); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 20px 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+header.top > * { min-width: 0; }
+.mark { width: 44px; height: 44px; border-radius: 22px; background: var(--button); color: var(--button-ink); display: grid; place-items: center; font: 700 20px/1 "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-decoration: none; flex: none; }
+.brand { font: 700 18px/1.3 var(--display); text-decoration: none; }
+.brand small { display: block; font-weight: 400; font-size: 13px; color: var(--soft); white-space: nowrap; }
+nav.langs { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+nav.langs a { font-size: 14px; padding: 6px 12px; border-radius: 16px; background: var(--chip); text-decoration: none; }
+nav.langs a[aria-current="page"] { background: var(--button); color: var(--button-ink); font-weight: 700; }
+main.sheet { background: var(--sheet); border-radius: 28px; padding: 28px 24px 32px; margin-block: 12px 40px; box-shadow: 0 4px 18px rgba(16,26,50,.12); }
+h1 { font: 700 34px/1.15 var(--display); margin: 0 0 6px; text-wrap: balance; overflow-wrap: anywhere; }
+.updated { color: var(--soft); font-size: 14px; margin: 0 0 20px; }
+h2 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); margin: 28px 0 6px; }
+p { margin: 0 0 12px; max-width: 65ch; overflow-wrap: anywhere; }
+.hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.hero img { width: 104px; height: auto; flex: none; }
+.links { display: grid; gap: 10px; margin-top: 20px; }
+.tile { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--chip); text-decoration: none; }
+.tile strong { display: block; font: 700 17px/1.3 var(--display); }
+.tile span { color: var(--soft); font-size: 14px; }
+/* Long hashes and file names wrap inside their tile on a phone. */
+.tile > span { min-width: 0; flex: 1; }
+.tile strong, .tile span { overflow-wrap: anywhere; }
+.tile::after { content: "›"; margin-left: auto; font-size: 22px; color: var(--soft); }
+.mail { display: inline-block; font-weight: 700; user-select: all; padding: 8px 14px; border-radius: 14px; background: var(--chip); }
+:lang(ko) p, :lang(ko) h1 { word-break: keep-all; }
+:lang(th) p, :lang(ja) p, :lang(zh) p { line-break: strict; }
+footer { color: var(--soft); font-size: 13px; padding-block: 0 32px; text-align: center; }
+@media (max-width: 480px) { h1 { font-size: 28px; } main.sheet { padding: 22px 18px 26px; } .hero img { width: 80px; } nav.langs { margin-left: 0; width: 100%; justify-content: flex-start; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="mark" href="../zh-hant.html" aria-label="HARU">하</a>
+<a class="brand" href="../zh-hant.html">HARU 하루<small>小小瞬間，你的故事。</small></a>
+<nav class="langs" aria-label="Language"><a href="index.html" hreflang="en" lang="en">English</a><a href="fr.html" hreflang="fr" lang="fr">Français</a><a href="ko.html" hreflang="ko" lang="ko">한국어</a><a href="es.html" hreflang="es" lang="es">Español</a><a href="ja.html" hreflang="ja" lang="ja">日本語</a><a href="de.html" hreflang="de" lang="de">Deutsch</a><a href="it.html" hreflang="it" lang="it">Italiano</a><a href="pt.html" hreflang="pt" lang="pt">Português</a><a href="zh-hans.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="zh-hant.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a><a href="nl.html" hreflang="nl" lang="nl">Nederlands</a><a href="pl.html" hreflang="pl" lang="pl">Polski</a><a href="tr.html" hreflang="tr" lang="tr">Türkçe</a><a href="id.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="vi.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="th.html" hreflang="th" lang="th">ไทย</a></nav>
+</header>
+<main class="sheet">
+<h1>原始碼</h1>
+<p class="updated">HARU 中的 FFmpeg · 2026年11月17日</p>
+<p class="updated">本翻譯僅為方便閱讀而提供；以本頁面的英文版及授權條款文字為準。</p>
+<p>HARU 使用 FFmpeg 製作影片。FFmpeg 是自由軟體，採用 GNU Lesser General Public License 3.0 或更新版本（LGPL）授權。HARU 本身並非開放原始碼；LGPL 允許它依這些條款使用 FFmpeg。以下提供 HARU 中 FFmpeg 函式庫的完整原始碼，以及建置方式。</p>
+<h2>HARU 包含的內容</h2>
+<p>Android 與 iPhone 上的 HARU 1.0.45 及更新版本：FFmpeg 8.1.2，由 FFmpegKit 建置為各自獨立的共用函式庫（libavcodec、libavdevice、libavfilter、libavformat、libavutil、libswresample、libswscale 和 ffmpegkit）。採用「min」建置：不含 GPL 或非自由的部分。FFmpeg 未經修改。</p>
+<p class="updated">以下壓縮檔與授權條款文字皆為英文原文。</p>
+<div class="links">
+<a class="tile" href="ffmpeg-8.1.2.tar.xz"><span><strong>ffmpeg-8.1.2.tar.xz</strong><span>FFmpeg 8.1.2, the official release (tag n8.1.2), not modified · 11.7 MB</span></span></a>
+<a class="tile" href="ffmpeg-8.1.2.tar.xz.asc"><span><strong>ffmpeg-8.1.2.tar.xz.asc</strong><span>Its signature by the FFmpeg release key FCF9 86EA 15E6 E293 A564 4F10 B432 2F04 D676 58D8 · 1 kB</span></span></a>
+<a class="tile" href="ffmpeg-kit-android-apple-8.1.2.tar.gz"><span><strong>ffmpeg-kit-android-apple-8.1.2.tar.gz</strong><span>FFmpegKit at commit 984fa2dba93f93cd768dccb3033e6f175c46d3b5 (tag android-apple-8.1.2 of github.com/sk3llo/ffmpeg-kit): the ffmpegkit library and the scripts that configured and built FFmpeg · 9.8 MB</span></span></a>
+<a class="tile" href="cpu_features-0.8.0.tar.gz"><span><strong>cpu_features-0.8.0.tar.gz</strong><span>cpu_features 0.8.0 (Google, Apache 2.0), used by FFmpegKit on Android · 0.1 MB</span></span></a>
+<a class="tile" href="LGPL-3.0.txt"><span><strong>LGPL-3.0.txt</strong><span>GNU Lesser General Public License 3.0 · 8 kB</span></span></a>
+<a class="tile" href="GPL-3.0.txt"><span><strong>GPL-3.0.txt</strong><span>GNU General Public License 3.0 · 35 kB</span></span></a>
+<a class="tile" href="Apache-2.0-cpu_features.txt"><span><strong>Apache-2.0-cpu_features.txt</strong><span>Licence of cpu_features · 13 kB</span></span></a>
+<a class="tile" href="SHA256SUMS"><span><strong>SHA256SUMS</strong><span>SHA-256 of every file above · 1 kB</span></span></a>
+</div>
+<h2>自行建置函式庫</h2>
+<p>解壓縮 FFmpegKit 壓縮檔，然後執行 <code>./build-all.sh android min</code> 或 <code>./build-all.sh ios min</code>（Android NDK 29.0.13113456、含 iOS SDK 的 Xcode）。指令碼會從與上述壓縮檔相同的標籤取得 FFmpeg 8.1.2 和 cpu_features；FFmpeg 的確切設定由函式庫本身輸出（<code>avutil_configuration()</code>）。建置需要數小時，並需要完整的工具鏈。</p>
+<h2>使用您自己的建置</h2>
+<p>這些函式庫是 App 內的獨立檔案：Android 上為 <code>lib/&lt;abi&gt;/lib*.so</code>，iPhone 上為 <code>Frameworks/*.framework</code>。您可以用自己建置的 FFmpeg 8.1.2 或相容版本取代它們。如果您為此還需要我們提供其他內容，請寫信給我們。</p>
+<h2>書面要約</h2>
+<p>在包含這些函式庫的最後一個 HARU 版本之後至少三年內，我們會將此原始碼寄送給任何提出要求的人，費用不超過寄送成本。請寫信至 <a href="mailto:contact@super-dev.app">contact@super-dev.app</a>。</p>
+<p>FFmpeg 是 FFmpeg 專案創始人 Fabrice Bellard 的商標。著作權：FFmpeg 開發者、Taner Sener 與 FFmpegKit 貢獻者、Google LLC。</p>
+</main>
+<footer>HARU · Super-dev · SDT Consulting · <a href="../privacy/zh-hant.html">隱私</a> · <a href="../support/zh-hant.html">支援</a></footer>
+</div>
+</body>
+</html>

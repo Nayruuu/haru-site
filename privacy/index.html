@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HARU privacy policy</title>
+<meta name="description" content="HARU 하루 — Small moments. Your story.">
+<style>
+@font-face { font-family: Haru; src: url("../assets/HaruPrototype-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: Haru; src: url("../assets/HaruPrototype-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+/* Layout: one cream sheet under a sky band, like the app's screens. */
+:root {
+  --sky: #e8f3ff; --sheet: #fffdf6; --ink: #243a6b; --soft: #5f6f8f;
+  --chip: rgba(36,58,107,.08); --line: rgba(36,58,107,.14); --button: #9cc9ff; --button-ink: #1b2a41;
+  --display: Haru, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --text: system-ui, -apple-system, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --sky: #16213f; --sheet: #1d2c52; --ink: #f4f1e6; --soft: #b7c2dc;
+  --chip: rgba(255,253,246,.08); --line: rgba(255,253,246,.16); --button: #9cc9ff; --button-ink: #1b2a41;
+  color-scheme: dark;
+} }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sky); color: var(--ink); font: 400 17px/1.55 var(--text); }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--button); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 20px 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+header.top > * { min-width: 0; }
+.mark { width: 44px; height: 44px; border-radius: 22px; background: var(--button); color: var(--button-ink); display: grid; place-items: center; font: 700 20px/1 "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; text-decoration: none; flex: none; }
+.brand { font: 700 18px/1.3 var(--display); text-decoration: none; }
+.brand small { display: block; font-weight: 400; font-size: 13px; color: var(--soft); white-space: nowrap; }
+nav.langs { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+nav.langs a { font-size: 14px; padding: 6px 12px; border-radius: 16px; background: var(--chip); text-decoration: none; }
+nav.langs a[aria-current="page"] { background: var(--button); color: var(--button-ink); font-weight: 700; }
+main.sheet { background: var(--sheet); border-radius: 28px; padding: 28px 24px 32px; margin-block: 12px 40px; box-shadow: 0 4px 18px rgba(16,26,50,.12); }
+h1 { font: 700 34px/1.15 var(--display); margin: 0 0 6px; text-wrap: balance; overflow-wrap: anywhere; }
+.updated { color: var(--soft); font-size: 14px; margin: 0 0 20px; }
+h2 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); margin: 28px 0 6px; }
+p { margin: 0 0 12px; max-width: 65ch; overflow-wrap: anywhere; }
+.hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.hero img { width: 104px; height: auto; flex: none; }
+.links { display: grid; gap: 10px; margin-top: 20px; }
+.tile { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--chip); text-decoration: none; }
+.tile strong { display: block; font: 700 17px/1.3 var(--display); }
+.tile span { color: var(--soft); font-size: 14px; }
+/* Long hashes and file names wrap inside their tile on a phone. */
+.tile > span { min-width: 0; flex: 1; }
+.tile strong, .tile span { overflow-wrap: anywhere; }
+.tile::after { content: "›"; margin-left: auto; font-size: 22px; color: var(--soft); }
+.mail { display: inline-block; font-weight: 700; user-select: all; padding: 8px 14px; border-radius: 14px; background: var(--chip); }
+:lang(ko) p, :lang(ko) h1 { word-break: keep-all; }
+:lang(th) p, :lang(ja) p, :lang(zh) p { line-break: strict; }
+footer { color: var(--soft); font-size: 13px; padding-block: 0 32px; text-align: center; }
+@media (max-width: 480px) { h1 { font-size: 28px; } main.sheet { padding: 22px 18px 26px; } .hero img { width: 80px; } nav.langs { margin-left: 0; width: 100%; justify-content: flex-start; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="mark" href="../index.html" aria-label="HARU">하</a>
+<a class="brand" href="../index.html">HARU 하루<small>Small moments. Your story.</small></a>
+<nav class="langs" aria-label="Language"><a href="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="fr.html" hreflang="fr" lang="fr">Français</a><a href="ko.html" hreflang="ko" lang="ko">한국어</a><a href="es.html" hreflang="es" lang="es">Español</a><a href="ja.html" hreflang="ja" lang="ja">日本語</a><a href="de.html" hreflang="de" lang="de">Deutsch</a><a href="it.html" hreflang="it" lang="it">Italiano</a><a href="pt.html" hreflang="pt" lang="pt">Português</a><a href="zh-hans.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="zh-hant.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="nl.html" hreflang="nl" lang="nl">Nederlands</a><a href="pl.html" hreflang="pl" lang="pl">Polski</a><a href="tr.html" hreflang="tr" lang="tr">Türkçe</a><a href="id.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="vi.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="th.html" hreflang="th" lang="th">ไทย</a></nav>
+</header>
+<main class="sheet">
+<h1>HARU privacy policy</h1>
+<p class="updated">Last updated 18 November 2026</p>
+<h2>Publisher and contact</h2>
+<p>HARU is published by SDT Consulting, operating as Super-dev. For app or privacy questions, contact <a href="mailto:contact@super-dev.app">contact@super-dev.app</a>.</p>
+<h2>Your content</h2>
+<p>HARU uses the videos, photos, logos, audio and text you choose to create your films. Moment selection, framing, face blur, audio separation, speech transcription and rendering run on your device. Voice-over recordings also remain local. HARU does not send this content to Super-dev servers, Suno, or a video-processing or AI service.</p>
+<p>Projects, films, subtitles and preferences are stored in the app&#x27;s local storage. No HARU account is required. HARU includes no advertising, advertising tracking or audience analytics service.</p>
+<h2>Permissions</h2>
+<p>Access to selected media is used to import and edit it. Photo-library access is used, as required by your operating system, to import media or save finished films and covers. Microphone access is used when you record a voice-over. You can manage permissions in your device settings; affected features may then be unavailable.</p>
+<h2>Updates and device services</h2>
+<p>On iOS, HARU checks Apple&#x27;s catalogue for the available app version. The request contains HARU&#x27;s app identifier, not your videos, text or recordings. Apple receives ordinary connection information, including the IP address. On Android, updates use Google Play. These services have their own privacy policies.</p>
+<p>Device backups, device-to-device transfers and photo-library sync follow your Apple, Google or device manufacturer&#x27;s settings. They may keep copies outside your phone. HARU does not disable these features, and Super-dev cannot access those copies.</p>
+<h2>HARU Plus purchases</h2>
+<p>HARU Plus is bought once through the App Store or Google Play. Apple or Google processes the payment under its own privacy policy; HARU does not see your payment details. The store gives HARU a signed confirmation, which HARU checks on your device. To keep the five-film trial and your purchase, HARU stores on your device the identifiers of the films made during the trial and whether HARU Plus was bought; on iPhone this record is also kept in the app&#x27;s Keychain, so reinstalling HARU does not reset it. Nothing about your purchase is sent to Super-dev.</p>
+<h2>Saving and sharing</h2>
+<p>Saving to the gallery creates a copy managed by your photo library. Sharing occurs when you request it and choose a destination. The receiving app gets the content you share and applies its own policies. HARU does not automatically publish to social networks.</p>
+<h2>Retention and deletion</h2>
+<p>Projects remain locally until you delete them or the app&#x27;s data. You can remove films, drafts and clips in HARU. Temporary files are used during processing and may be cleaned up by HARU or your operating system.</p>
+<p>Deleting a project does not delete original media, gallery copies, system backups or posts in other apps. Manage those copies in the relevant services. Super-dev does not hold a remote copy of your projects to delete.</p>
+<h2>Support and changes</h2>
+<p>If you email us, we receive your email address and the information you choose to provide. We use it to respond to your request; send videos or diagnostic files only if you wish to disclose them. Support correspondence is retained while handling the request and for necessary follow-up or applicable obligations. Contact us to request access to or deletion of that correspondence.</p>
+<p>We will update this policy if HARU&#x27;s practices change. The published page will display its revision date.</p>
+</main>
+<footer>HARU · Super-dev · SDT Consulting · <a href="../privacy/index.html">Privacy</a> · <a href="../support/index.html">Support</a></footer>
+</div>
+</body>
+</html>
